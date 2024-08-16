@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function score (input) {
+            return -34.54231974921628 + input[0] * 0.5638154948499775;
+        }
+        function btnSubmit_Click() {
+            const input = [document.getElementById('txtHeight').value];
+            const result = score(input);
+            document.getElementById('txtWeight').value = result;
+        }
+    </script>
+</head>
+<body>
+    <h2>Linear-regression / Height-weight</h2>
+    <table>
+        <tr>
+            <td>Height</td>
+            <td><input type="text" id="txtHeight" /></td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td><input type="text" id="txtWeight" readonly="true" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="Submit" onclick="btnSubmit_Click()" /></td>
+        </tr>
+    </table>
+</body>
+</html>
